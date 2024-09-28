@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+
+
+int main() {
+  double metros, resultado;
+  cout << "ingrese el valor que quiera convertir: \nkilometros:  \nmetros:  \nmilla:  \nleguas:  \nyardas:  \n"; 
+
+  string unidad;
+  cout << "Ingrese la unidad de medida (km, m, mi, l, yd): ";cin >> unidad;
+
+  
+  cout << " ingrese la medida en (mts) :"; cin >> metros; 
+
+  
+
+  if (unidad == "km") {
+    resultado = metros / 1000;
+    cout << " el resultado es : " << resultado << " kilometros";
+    
+  } else if (unidad == "m") {
+    resultado = metros;
+    cout << " el resultado es : " << resultado << " metros"; 
+    
+  } else if (unidad == "mi") {
+    
+    resultado = metros / 1609;
+    cout << " el resultado es : " << resultado << " millas";
+  } else if (unidad == "l") {
+    
+    resultado = metros / 4828;
+    cout << " el resultado es : " << resultado << " leguas";
+    
+  } else if (unidad == "yd") {
+    resultado = metros * 1.094; 
+    cout << " el resultado es : " << resultado << " yardas"; 
+    
+  } else {
+    cout << "la unidad de medida es invalida verifique que este bien escrita\n";
+    
+  }
+  return 0;
+}
